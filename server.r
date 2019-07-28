@@ -26,6 +26,10 @@ shinyServer(
                                           buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
                                         ))
 
+    output$value <- renderPrint({
+      return(input$pos)
+    })
+
     output$networkChart <- renderPlot({
       work_df <- Dataset()
       text_file_cooccuance <- keywords_collocation(x=work_df,
