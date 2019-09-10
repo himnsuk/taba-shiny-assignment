@@ -49,7 +49,7 @@ shinyServer(
 
       x <- ggraph(wordnetwork, layout = "fr") +
         geom_edge_link(aes(width = cooc, edge_alpha = cooc), edge_colour = "#d16102") +
-        geom_node_text(aes(label = name), col = "blue", size = 4) +
+        geom_node_text(aes(label = name), col = "blue", size = 4)
         return(x)
     })
 
